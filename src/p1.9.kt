@@ -1,11 +1,19 @@
 fun main(){
-    var arr = arrayOf<Int>(10,2,62,5,50,44)
-    var max = arr[0]
-    for ((i,e) in arr.withIndex()){
-        if (e>=max)
-        {
-            max=e
+    val a = ArrayList<Int>()
+    for (i in 0..4) {
+        val b = readln().toInt()
+        a.add(b)
+    }
+
+    for (i in 0..4) {
+        println("a[$i]=${a[i]}")
+    }
+
+    var max = a[0]
+    for (i in 1..4) {
+        if (a[i] > max) {
+            max = a[i]
         }
     }
-    println("max number in Array is $max")
+    print("Largest element = $max")
 }

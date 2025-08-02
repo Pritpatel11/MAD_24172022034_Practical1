@@ -1,25 +1,16 @@
 fun main(){
-    println("Enter the num1:")
-    var a = readLine()!!.toInt()
-
-    println("Enter the num2:")
-    var b = readLine()!!.toInt()
-
-    println("Enter the operator:")
-    var op = readLine()!!
-
-    var re = cal(a,b,op)
-    println(re)
-
+    var a = readln()!!.toInt()
+    var b = readln()!!.toInt()
+    operation(a,b)
 }
-fun cal(num1:Int ,num2: Int,operator: String): String
-{
-    var result = when(operator){
-        "+" -> ("Addition of $num1,$num2 is:${num1+num2}").toString()
-        "-" -> ("Subtraction of $num1,$num2 is ${num1+num2}").toString()
-        "*" ->("multiplication of $num1,$num2 is ${num1+num2}").toString()
-        "/" ->("division or $num1,$num2 is ${num1+num2}").toString()
-        else -> "You Enter the Wrong thing."
+fun operation(a: Int, b: Int){
+    println("Addition of $a, $b  is ${a + b}")
+    println("Subtraction of $a, $b is ${a - b}")
+    println("Multiplication of $a, $b is ${a * b}")
+    if (b != 0) {
+        println("Division of $a, $b is ${a.toDouble() / b}")
+    } else {
+        println("Division: Cannot divide by zero")
     }
-    return result
 }
+
