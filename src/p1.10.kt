@@ -1,4 +1,3 @@
-// Define Car class
 class Car(
     var type: String,
     var model: Int,
@@ -10,18 +9,15 @@ class Car(
         println("Object of class is created and Init is called.")
     }
 
-    // Function to get original car price
     fun getOriginalPrice(): Double {
         return price
     }
 
-    // Function to calculate current price after depreciation
     fun getCurrentPrice(): Double {
-        val depreciation = milesDriven * 10   // ₹10 depreciation per mile
-        return (price - depreciation).coerceAtLeast(0.0) // Avoid negative
+        val depreciation = milesDriven * 10
+        return (price - depreciation).coerceAtLeast(0.0)
     }
 
-    // Function to display car information
     fun displayCarInfo() {
         println("----------")
         println("Car Information: $type, $model")
@@ -33,7 +29,6 @@ class Car(
     }
 }
 
-// Main function (program starts here)
 fun main() {
     println("\nCreating Car Class Object car1 in next line")
     val car1 = Car("BMW", 2018, 100000.0, "Aman", 105)

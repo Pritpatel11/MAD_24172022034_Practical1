@@ -1,5 +1,7 @@
 fun main(){
+    println("Enter the value of a:")
     var a = readln()!!.toInt()
+    println("Enter the value of b:")
     var b = readln()!!.toInt()
     operation(a,b)
 }
